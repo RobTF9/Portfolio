@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { FaLink } from "react-icons/fa";
+
 import ContactForm from "../../Contact/ContactForm";
-import ContactCard from "../../Contact/ContactCard";
+import TitleCard from "../../Common/TitleCard";
 import colors from "../../../shared/colors";
 import { FullContainer } from "../../Common/Container";
 
 const ProjectContact = ({ color, client, link }) => {
   return (
     <ContactContainer color={color} client={client}>
-      <ContactCard
-        link={link}
+      <TitleCard
         title="Want to know more?"
         copy="Take a look at the project or say hello!"
+        link={link}
+        icon={<FaLink />}
+        linkText="View project"
       />
       <ContactForm name="Contact Form" />
     </ContactContainer>

@@ -3,14 +3,14 @@ import SEO from "../components/Layout/SEO";
 import { ContentContainer } from "../components/Common/Container";
 import ContactForm from "../components/Contact/ContactForm";
 import { animations } from "../shared/transitions";
-import ContactCard from "../components/Contact/ContactCard";
+import TitleCard from "../components/Common/TitleCard";
 
 const Contact = () => {
   return (
     <>
       <SEO title="Contact" />
       <ContentContainer style={animations.verticleSlide(`15rem`, 0)}>
-        <ContactCard title="Contact" copy="Leave a message and say hello!" />
+        <TitleCard title="Contact" copy="Leave a message and say hello!" />
         <ContactForm name="Contact Form" />
       </ContentContainer>
     </>
