@@ -7,7 +7,7 @@ import { animations } from "../../../shared/transitions";
 const ProjectIntro = ({ copy }) => {
   return (
     <IntroContainer style={animations.horizontalSlide(`-15rem`, 100)}>
-      <Copy className="full">{copy}</Copy>
+      <Copy>{copy}</Copy>
     </IntroContainer>
   );
 };
@@ -24,6 +24,7 @@ const IntroContainer = styled(ContentContainer)`
 const Copy = styled.h3`
   line-height: 1.4;
   font-weight: 300;
+  grid-column: span 2;
 `;
 
 export default ProjectIntro;

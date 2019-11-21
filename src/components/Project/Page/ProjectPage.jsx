@@ -4,9 +4,7 @@ import SEO from "../../Layout/SEO";
 import ProjectHero from "./ProjectHero";
 import ProjectIntro from "./ProjectIntro";
 import ProjectContent from "./ProjectContent";
-import ContactForm from "../../Contact/ContactForm";
-import ContactCard from "../../Contact/ContactCard";
-import { ContactContainer } from "../../Common/Container";
+import ProjectContact from "./ProjectContact";
 import OtherProjects from "./OtherProjects";
 
 const postLayout = ({ data }) => {
@@ -38,14 +36,7 @@ const postLayout = ({ data }) => {
       />
       <ProjectIntro copy={outline} />
       <ProjectContent client={client} content={content} color={color} />
-      <ContactContainer color={color} client={client}>
-        <ContactCard
-          link={link}
-          title="Want to know more?"
-          copy="Take a look at the project or say hello!"
-        />
-        <ContactForm name="Contact Form" />
-      </ContactContainer>
+      <ProjectContact color={color} client={client} link={link} />
       <OtherProjects projects={projects} />
     </>
   );
