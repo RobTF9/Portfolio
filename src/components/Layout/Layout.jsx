@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
-import colors from "../../shared/colors";
+import { useSpring, animated, config } from "react-spring";
+
 import "./styles/init.css";
-import "./styles/type.css";
+
+import colors from "../../shared/colors";
 import Nav from "../Navigation/Nav";
 import NavDrawer from "../Navigation/NavDrawer";
-import { useSpring, animated, config } from "react-spring";
+import Typography from "./Typography";
 
 const Layout = ({ children }) => {
   const [visible, setVisible] = useState(false);
@@ -22,6 +24,12 @@ const Layout = ({ children }) => {
     <>
       <Nav toggleNav={toggleNav} visible={visible} animation={animation} />
       <Body visible={visible} />
+      <Typography
+        bodyFont="Source Sans Pro"
+        bodyWeight={400}
+        headerFont="Source Sans Pro"
+        headerWeight={900}
+      />
       <Main
         style={{
           transform: animation.positive.interpolate(
