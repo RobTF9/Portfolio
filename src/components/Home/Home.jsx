@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+
 import { HomeContainer, Text, Image } from "./HomeStyles";
 import TextLink from "../Common/TextLink";
 import { animations } from "../../shared/transitions";

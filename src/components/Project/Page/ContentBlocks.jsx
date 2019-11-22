@@ -5,7 +5,7 @@ import {
   RightContent,
   MiddleContent,
   Text,
-  Video,
+  VideoWrapper,
 } from "./ContentBlockStyles";
 import { animated, useSpring, config } from "react-spring";
 import { Waypoint } from "react-waypoint";
@@ -34,6 +34,18 @@ export const MiddleContentBlock = props => (
 
 const AnimatedImage = animated(Img);
 const AnimatedText = animated(Text);
+
+const Video = ({ video, client, style }) => (
+  <VideoWrapper style={style}>
+    <iframe
+      title={client}
+      aria-hidden="true"
+      src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
+      frameBorder="0"
+      allowFullScreen=""
+    ></iframe>
+  </VideoWrapper>
+);
 
 const Content = props => {
   const [view, setView] = useState(false);

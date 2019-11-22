@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import breakpoints from "../../../shared/breakpoints";
 import colors from "../../../shared/colors";
@@ -72,19 +71,7 @@ export const Text = styled.div`
   }
 `;
 
-export const Video = ({ video, client, style }) => (
-  <Wrapper style={style}>
-    <iframe
-      title={client}
-      aria-hidden="true"
-      src={`https://www.youtube.com/embed/${video}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=${video}`}
-      frameBorder="0"
-      allowFullScreen=""
-    ></iframe>
-  </Wrapper>
-);
-
-const Wrapper = styled(animated.div)`
+export const VideoWrapper = styled(animated.div)`
   position: relative;
   width: 100%;
   padding-top: 56.25%;
