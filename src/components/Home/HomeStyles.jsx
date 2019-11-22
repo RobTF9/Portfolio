@@ -17,8 +17,12 @@ export const HomeContainer = styled(Div100vh)`
 
 export const Text = styled(animated.div)`
   position: absolute;
-  top: ${spacings.xLarge};
+  top: ${spacings.large};
   left: 0;
+
+  ${breakpoints.tablet} {
+    top: ${spacings.xLarge};
+  }
 
   ${breakpoints.desktop} {
     top: ${spacings.xxLarge};

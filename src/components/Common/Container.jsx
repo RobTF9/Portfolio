@@ -18,7 +18,11 @@ const Container = styled(animated.div)`
 
 export const ContentContainer = styled(Container)`
   grid-row-gap: ${spacings.small};
-  margin-top: ${spacings.xLarge};
+  margin-top: ${spacings.large};
+
+  ${breakpoints.tablet} {
+    margin-top: ${spacings.xLarge};
+  }
 
   ${breakpoints.desktop} {
     margin-top: ${spacings.xxLarge};
